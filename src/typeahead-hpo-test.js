@@ -1,10 +1,6 @@
 /* Typeahead that uses the Bloodhound suggestion engine. */
 
-h= {
-  "TERM-A": ["GEN1", "GEN2", "GEN3"],
-  "TERM-B": ["GEN1", "GEN2", "GEN3"],
-  "TERM-C": ["BAC2", "AKJA4", "AKSFJL1", "ALKJ", "ALFKSD"]
-};
+var h= require("hpo2gene.json");
 
 // constructs the suggestion engine
 var states = new Bloodhound({

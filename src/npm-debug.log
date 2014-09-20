@@ -4,14 +4,14 @@
 3 info using node@v0.10.32
 4 error install Couldn't read dependencies
 5 error Failed to parse json
-5 error Unexpected token }
+5 error Unexpected string
 6 error File: /Users/rammar/Desktop/hack_the_north/nodeApi/src/package.json
 7 error Failed to parse package.json data.
 7 error package.json must be actual JSON, not just JavaScript.
 7 error
 7 error This is not a bug in npm.
 7 error Tell the package author to fix their package.json file. JSON.parse
-8 error System Darwin 13.3.0
+8 error System Darwin 13.4.0
 9 error command "node" "/usr/local/bin/npm" "install"
 10 error cwd /Users/rammar/Desktop/hack_the_north/nodeApi/src
 11 error node -v v0.10.32
