@@ -1,6 +1,5 @@
 var settings= {
-  PORT: 1337,
-  PYTHONPORT: 5000
+  PORT: 1337
 };
 
 module.exports= settings;

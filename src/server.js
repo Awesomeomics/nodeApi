@@ -1,14 +1,12 @@
+/* Guava web server to provide static content. */
+
 (function() {
 
 	var settings= require("./config");
 	var express= require("express");  // Express web server
-	var busboy= require("connect-busboy");  // middleware for file upload
-	var path= require("path");
 
 	var port= settings.PORT || 8080;
 	var app= express();
-
-	app.use(busboy());
 
 	// this middleware will be executed for every request to the app
 	app.use(function(req, res, next) {		
@@ -22,25 +20,16 @@
 		res.send("Welcome to Gauva!");
 	});
 
-	app.get("/team", function(req, res) {
-		res.send("Our team is awesome.");
+	app.post("/login", function(req, res, next) {
+
 	});
 
-	app.post("/vcf", function(req, res, next) {
-		req.busboy.on("file", function(fieldname, file, filename, encoding, mimetype) {
-			// Validate file extension
-			var vcfPattern= /.+\.vcf/i;
-			if (vcfPattern.test(filename)) {
-				res.send("File accepted.")
-				// HERE we'll call python and pass the file.
-			} else {
-				res.send("Not a VCF file.")
-			}
+	app.post("/logout", function(req, res, next) {
 
-			console.log("Got the file: " + filename);
+	});
 
-		});
-		req.pipe(req.busboy);
+	app.post("/signup", function(req, res, next) {
+
 	});
 
 	var server= app.listen(port, function() {
