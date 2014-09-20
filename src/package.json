@@ -1,0 +1,9 @@
+{
+	"name": "guava-server",
+	"main": "server.js",
+	"version": "1.0.0",
+	"dependencies": {
+		"express": "4.x",
+		"connect-busboy": "~0.0.1",
+	}
+}

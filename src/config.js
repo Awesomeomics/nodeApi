@@ -1,6 +1,6 @@
 var settings= {
-  hostname: "127.0.0.1",
-  port: 1337
+  PORT: 1337,
+  PYTHONPORT: 5000
 };
 
 module.exports= settings;

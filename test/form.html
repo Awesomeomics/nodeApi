@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guava Genomic Variant Analysis</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<h1>Guava VCF uploading</h1>
+		<div id="main-div">
+			<p>Testing this out.</p>
+			<form id="vcf-form" action="http://localhost:1337/vcf" method="POST" enctype="multipart/form-data">
+				<input id="vcf-file-select" type="file"/>
+				<button id= "vcf-upload-button" type="submit">Upload!</button>
+			</form>
+		</div>
+		<script>
+			var form= $("#vcf-form");
+			var fileSelect= $("#vcf-file-select");
+			var uploadButton= $("#vcf-upload-button");
+			var file= fileSelect.file;
+
+			form.on("submit", function(event){
+				event.preventDefault();
+				uploadButton.text("Uploading...");
+
+				console.log(file);
+
+				var data= new FormData();
+				data.append()
+			});
+
+
+		</script>
+	</body>
+</html>
